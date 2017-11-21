@@ -87,7 +87,7 @@
                           function(x) seq(min(x), max(x), length = n))
 
         if (any(ff)) {
-            newdata <- cbind(mf, f.mf)
+            newdata <- data.frame(newdata, f.mf)
         }
         colnames(newdata) <- c(m.terms[!ff], m.terms[ff])
     }
